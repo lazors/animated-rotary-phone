@@ -4,67 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XLSX Parser - Upload and Parse Excel Files</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>📊 XLSX Parser</h1>
-            <p>Upload and parse Excel files to view data in JSON format</p>
-        </header>
-
-        <div class="upload-section">
-            <div class="upload-area" id="uploadArea">
-                <div class="upload-content">
-                    <div class="upload-icon">📁</div>
-                    <h3>Drop your XLSX file here</h3>
-                    <p>or <span class="browse-text">browse files</span></p>
-                    <input type="file" id="fileInput" accept=".xlsx,.xls" style="display: none;">
-                </div>
-            </div>
-        </div>
-
-        <div class="controls" id="controls" style="display: none;">
-            <div class="sheet-selector">
-                <label for="sheetSelect">Select Sheet:</label>
-                <select id="sheetSelect">
-                    <option value="">Choose a sheet...</option>
-                </select>
-            </div>
-            <div class="action-buttons">
-                <button id="parseBtn" class="btn btn-primary">Parse Data</button>
-                <button id="downloadBtn" class="btn btn-secondary" style="display: none;">Download JSON</button>
-                <button id="clearBtn" class="btn btn-danger">Clear</button>
-            </div>
-        </div>
-
-        <div class="results-section" id="resultsSection" style="display: none;">
-            <div class="results-header">
-                <h3>Parsed Data</h3>
-                <div class="results-info">
-                    <span id="recordCount">0 records</span>
-                    <span id="fileName"></span>
-                </div>
-            </div>
-            <div class="results-content">
-                <div class="data-table" id="dataTable"></div>
-                <div class="json-output">
-                    <h4>JSON Output</h4>
-                    <pre id="jsonOutput"></pre>
-                </div>
-            </div>
-        </div>
-
-        <div class="error-message" id="errorMessage" style="display: none;">
-            <div class="error-content">
-                <span class="error-icon">⚠️</span>
-                <span class="error-text"></span>
-                <button class="error-close">&times;</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
